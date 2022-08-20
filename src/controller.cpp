@@ -41,6 +41,16 @@ void Controller::HandleInput(bool &running, Snake &snake) const
         ChangeDirection(snake, Snake::Direction::kRight,
                         Snake::Direction::kLeft);
         break;
+      // Exit game
+      case SDLK_e:
+        running = false;
+        break;
+
+      // Pause game
+      case SDLK_p:
+        SDL_ShowSimpleMessageBox(SDL_MESSAGEBOX_ERROR,
+                                 "Paused", "Press OK to resume", NULL);
+        break;
       }
     }
   }
