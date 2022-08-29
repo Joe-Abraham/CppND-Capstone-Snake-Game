@@ -11,6 +11,7 @@ In this project, you can build your own C++ application or extend this Snake gam
 ## New Feature Added in
 
 As the game progresses, there are obstacles added to the game environment. Hitting an obstacle will kill the snake.
+
 <img src="Screenshot 2022-08-29 at 10.31.01 AM.png"/>
 
 ## Dependencies for Running Locally
