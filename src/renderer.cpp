@@ -67,7 +67,7 @@ void Renderer::Render(Snake const snake, SDL_Point const &food, Obstacles const 
   }
 
   // Render Obstacles
-  SDL_SetRenderDrawColor(sdl_renderer, 0x00, 0x7A, 0xCC, 0xFF);
+  SDL_SetRenderDrawColor(sdl_renderer, 0x48, 0x5A, 0xBC, 0xFF);
   for (SDL_Point const &point : obstacles.points)
   {
     block.x = point.x * block.w;
@@ -94,6 +94,7 @@ void Renderer::Render(Snake const snake, SDL_Point const &food, Obstacles const 
 void Renderer::UpdateWindowTitle(int score, int fps)
 {
   std::string title{"Snake Score: " + std::to_string(score) +
-                    " FPS: " + std::to_string(fps)};
+                    " FPS: " + std::to_string(fps) +
+                    "No of Obstacles: " + std::to_string(score)};
   SDL_SetWindowTitle(sdl_window, title.c_str());
 }
