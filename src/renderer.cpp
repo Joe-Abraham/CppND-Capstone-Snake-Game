@@ -95,6 +95,6 @@ void Renderer::UpdateWindowTitle(int score, int fps)
 {
   std::string title{"Snake Score: " + std::to_string(score) +
                     " FPS: " + std::to_string(fps) +
-                    "No of Obstacles: " + std::to_string(score)};
+                    " No of Obstacles: " + std::to_string(score)};
   SDL_SetWindowTitle(sdl_window, title.c_str());
 }
