@@ -12,7 +12,7 @@ public:
 
   void Update();
 
-  void IncreaseObstacles();
+  void IncreaseObstacles(SDL_Point &p);
   bool ObstaclesCell(int x, int y);
 
   int size{1};

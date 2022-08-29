@@ -63,10 +63,27 @@ void Game::PlaceFood()
     y = random_h(engine);
     // Check that the location is not occupied by a snake item before placing
     // food.
-    if (!snake.SnakeCell(x, y))
+    if (!snake.SnakeCell(x, y) && !obs.ObstaclesCell(x, y))
     {
       food.x = x;
       food.y = y;
+      return;
+    }
+  }
+}
+
+void Game::IncreaseObstacles()
+{
+  int x, y;
+
+  while (true)
+  {
+    x = random_w(engine);
+    y = random_h(engine);
+    if (!snake.SnakeCell(x, y) && !obs.ObstaclesCell(x, y))
+    {
+      SDL_Point p{static_cast<int>(x), static_cast<int>(y)};
+      obs.IncreaseObstacles(p);
       return;
     }
   }
@@ -90,7 +107,7 @@ void Game::Update()
     // Grow snake and increase speed.
     snake.GrowBody();
     snake.speed += 0.02;
-    obs.IncreaseObstacles();
+    this->IncreaseObstacles();
   }
 
   StuckObstacle();

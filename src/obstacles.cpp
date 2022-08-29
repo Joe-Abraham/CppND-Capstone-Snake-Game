@@ -32,9 +32,9 @@ void Obstacles::UpdateBody(SDL_Point &current_head_cell,
   }
 }
 
-void Obstacles::IncreaseObstacles()
+void Obstacles::IncreaseObstacles(SDL_Point &p)
 {
-  ;
+  points.push_back(p);
 }
 
 // Inefficient method to check if cell is occupied by obstacles.

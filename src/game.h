@@ -17,6 +17,7 @@ public:
   int GetScore() const;
   int GetSize() const;
   void StuckObstacle(void);
+  void IncreaseObstacles();
 
 private:
   Snake snake;
