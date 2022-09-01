@@ -8,11 +8,13 @@ The Capstone Project gives you a chance to integrate what you've learned through
 
 In this project, you can build your own C++ application or extend this Snake game, following the principles you have learned throughout this Nanodegree Program. This project will demonstrate that you can independently create applications using a wide range of C++ features.
 
-## New Feature Added in
-
+## New Feature Added - Obsctacles
 As the game progresses, there are obstacles added to the game environment. Hitting an obstacle will kill the snake.
-
 <img src="output.gif"/>
+
+## Rubric Points
+
+[Attached as PDF](./Rubric%20Points.pdf)
 
 ## Dependencies for Running Locally
 * cmake >= 3.7

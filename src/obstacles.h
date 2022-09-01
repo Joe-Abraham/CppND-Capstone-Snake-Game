@@ -15,7 +15,6 @@ public:
   void IncreaseObstacles(SDL_Point &p);
   bool ObstaclesCell(int x, int y);
 
-  int size{1};
   bool snake_alive{true};
   std::vector<SDL_Point> points;
 
