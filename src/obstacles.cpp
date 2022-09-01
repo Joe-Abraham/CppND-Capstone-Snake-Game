@@ -41,7 +41,7 @@ void Obstacles::IncreaseObstacles(SDL_Point &p)
 bool Obstacles::ObstaclesCell(int x, int y)
 {
   for (auto const &item : points)
-  {
+  { 
     if (x == item.x && y == item.y)
     {
       return true;
